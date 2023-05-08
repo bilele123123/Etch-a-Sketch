@@ -17,7 +17,23 @@
     </header>
     
     <main>
-        <div id="container"></div>
+
+        <div class="selection">
+            <input id="pick-color-button" type="color" value="black">
+            <button id="single-color-button">Single Color</button>
+            <button id="rainbow-color-button">Rainbow Colors</button>
+            <button id="eraser-button">Eraser</button>
+            <button id="clear-button">Clear</button>
+            <div id="grid-size">
+                <div>16 x 16</div>
+                <input type="range" min = "1" max = "64" value="16">
+            </div>
+        </div>
+
+        <div id = "sketchpad">
+            <div id="container"></div>
+        </div>
+
     </main>
 
 

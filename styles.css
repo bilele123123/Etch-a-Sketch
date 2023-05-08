@@ -1,16 +1,20 @@
 body {
     background-color: #252525;
     font-family: sans-serif;
+    color: aliceblue;
 }
 
 main {
     display: flex;
+    flex-direction: row;
+    
 }
 
 .header {
     text-align: center;
     color: aliceblue;
     font-size: 32px;
+
 }
 
 #container {
@@ -19,6 +23,7 @@ main {
     grid-template-columns: repeat(var(--grid-column), 1fr);
     grid-template-rows: repeat(var(--grid-row), 1fr);
     border: 1px solid aliceblue;
+    align-items: center;
 
 }
 
@@ -29,4 +34,11 @@ main {
 
 .grid:hover {
     background-color: black;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #332940;
 }
