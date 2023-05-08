@@ -1,0 +1,32 @@
+body {
+    background-color: #252525;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+.header {
+    text-align: center;
+    color: aliceblue;
+    font-size: 32px;
+}
+
+#container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(var(--grid-column), 1fr);
+    grid-template-rows: repeat(var(--grid-row), 1fr);
+    border: 1px solid aliceblue;
+
+}
+
+.grid {
+    padding: 15px;
+    background-color: aliceblue;
+}
+
+.grid:hover {
+    background-color: black;
+}
