@@ -19,7 +19,7 @@ main {
 
 }
 
-#container {
+#sketchpad {
     display: grid;
     grid-gap: 0;
     grid-template-columns: repeat(var(--grid-column), 1fr);
@@ -54,9 +54,15 @@ button {
     width: 80%;
 }
 
+button.active {
+    background-color: #332940;
+    color: #fefefe;
+}
+
 #pick-color-button {
     padding: 0;
     width: 80%;
     margin-top: 20px;
     height: 44px;
+    background-color: black;
 }
