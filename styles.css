@@ -1,7 +1,7 @@
 body {
-    background-color: #252525;
+    background-color: #F6F8F8;
     font-family: sans-serif;
-    color: aliceblue;
+    color: #3D3D3D;
 }
 
 main {
@@ -14,8 +14,9 @@ main {
 
 .header {
     text-align: center;
-    color: aliceblue;
+    color: #3D3D3D;
     font-size: 32px;
+    text-shadow: 1px 1px #3D3D3D
 
 }
 
@@ -26,27 +27,31 @@ main {
     background-color: aliceblue;
     width: 500px;
     height: 500px;
-    box-shadow: rgb(199, 170, 193) 0px 3px 15px;
+    box-shadow: #382451 0px 3px 15px;
+    border-radius: 10px;
 }
 
 .selection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #332940;
+    background-color: #dbd4db8e;
     width: 200px;
     gap: 25px;
     max-height: 500px;
+    border-radius: 25px;
+    box-shadow: #382451 0px 3px 8px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 14px;
     width: 80%;
+    border: 1px solid black;
 }
 
 button.active {
-    background-color: #332940;
+    background-color: #382451;
     color: #fefefe;
 }
 
@@ -54,6 +59,24 @@ button.active {
     padding: 0;
     width: 80%;
     margin-top: 20px;
-    height: 44px;
+    border-radius: 15px;
+    height: 36px;
     background-color: black;
 }
+button:hover,
+input[type='color']:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  button,
+  input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 10px;
+    box-shadow: #382451 0px 3px 8px;
+  }
+  
