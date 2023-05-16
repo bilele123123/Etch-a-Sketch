@@ -24,7 +24,6 @@ main {
     display: grid;
     grid-template-columns: repeat(var(--grid-row), 1fr);
     grid-template-rows: repeat(var(--grid-row), 1fr);
-    background-color: aliceblue;
     width: 500px;
     height: 500px;
     box-shadow: #382451 0px 3px 15px;
@@ -36,8 +35,8 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #dbd4db8e;
+    gap: 35px;
     width: 200px;
-    gap: 25px;
     max-height: 500px;
     border-radius: 25px;
     box-shadow: #382451 0px 3px 8px;
@@ -80,3 +79,45 @@ input[type='color']:hover {
     box-shadow: #382451 0px 3px 8px;
   }
   
+.grid {
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #dbd4db8e;
+}
+
+#textInput {
+    color: #3D3D3D;
+    font-size: 18px;
+    margin-bottom: -20px;
+}
+
+#slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;  
+    border: 1px solid #3D3D3D;
+    background: #F6F8F8;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  #slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #382451;
+    cursor: pointer;
+  }
+  
+  #slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #382451;
+    cursor: pointer;
+  }
