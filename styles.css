@@ -35,7 +35,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #dbd4db8e;
-    gap: 35px;
+    gap: 25px;
     width: 200px;
     max-height: 500px;
     border-radius: 25px;
@@ -81,7 +81,7 @@ input[type='color']:hover {
   
 .grid {
     border: 1px solid black;
-    border-radius: 2px;
+    border-radius: 1px;
     background-color: #dbd4db8e;
 }
 
@@ -96,7 +96,7 @@ input[type='color']:hover {
     width: 80%;
     height: 10px;
     border-radius: 5px;  
-    border: 1px solid #3D3D3D;
+    border: 1px solid black;
     background: #F6F8F8;
     outline: none;
     opacity: 0.7;

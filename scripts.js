@@ -1,6 +1,9 @@
 const DEFAULT_COLOR = "black";
 const DEFAULT_MODE = "single";
 const DEFAULT_SIZE = 16;
+const opacityStep = 0.1;
+const maxOpacity = 0.9;
+const minOpacity = 0.1;
 
 let currentMode = DEFAULT_MODE;
 let currentColor = DEFAULT_COLOR;
@@ -20,6 +23,7 @@ const eraserBTN = document.getElementById("eraser-button");
 const clearBTN = document.getElementById("clear-button");
 const textInput = document.getElementById("textInput");
 const slider = document.getElementById("slider");
+const shadeBTN = document.getElementById("shadeBTN");
 
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
@@ -29,6 +33,7 @@ singleBTN.onclick = () => changeCurrentMode("single");
 rainbowBTN.onclick = () => changeCurrentMode("rainbow");
 eraserBTN.onclick = () => changeCurrentMode("eraser");
 clearBTN.onclick = () => newGrid();
+shadeBTN.onclick = () => changeCurrentMode("shade");
 
 let update = () => textInput.innerHTML = `${slider.value} x ${slider.value}`;
 
@@ -78,7 +83,24 @@ function changeColor(e) {
     }
     else if (currentMode === "eraser")
     {
-        e.target.style.backgroundColor = "aliceblue";
+        e.target.style.backgroundColor = "#dbd4db8e";
+    }
+    else if (currentMode === "shade") {
+        const currentOpacity = parseFloat(this.style.backgroundColor.slice(-4, -1));
+        if (currentOpacity < maxOpacity) 
+        {
+            const newOpacity = Math.min(currentOpacity + opacityStep, maxOpacity);
+            this.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
+            this.classList.add('active');
+        } 
+        else if (this.classList.contains('active') && this.style.backgroundColor === 'rgb(0, 0, 0)') 
+        {
+            return;
+        } 
+        else if (!this.classList.contains('active')) 
+        {
+            this.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+        }
     }
 }
 
@@ -96,6 +118,10 @@ function activeButton(newMode) {
     {
         eraserBTN.classList.remove("active");
     }
+    else if (currentMode === "shade")
+    {
+        shadeBTN.classList.remove("active");
+    }
 
     if (newMode === "single")
     {
@@ -108,6 +134,10 @@ function activeButton(newMode) {
     else if (newMode === "eraser")
     {
         eraserBTN.classList.add("active");
+    }
+    else if (newMode === "shade")
+    {
+        shadeBTN.classList.add("active");
     }
 
 }
