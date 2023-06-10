@@ -1,7 +1,23 @@
-The Odin Project: Etch-a-Sketch
+# Etch-a-Sketch
 
-This project will showcase my HTML, CSS and Javascript skills by creating a browser utility sketchpad / Etch-a-Sketch. With intentions to improve my skills on flex manipulation and overall web design skills.
+A web-based drawing application that is similar to the classic Etch a Sketch. Users can draw on the sketchpad, change colors, shade, erase, clear grid, and resize the grid.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+## Features
+
+- Draw on the sketchpad
+- Color selection
+- Shading functionality
+- Eraser tool
+- Clear grid / Reset grid
+- Resizing the grid
 
 Live Demo Link: https://bilele123123.github.io/Etch-a-Sketch/
-![website preview1](https://github.com/bilele123123/Etch-a-Sketch/blob/main/Web%20Preview/EtchaSketch.png)
-![website preview2](https://github.com/bilele123123/Etch-a-Sketch/blob/main/Web%20Preview/Preview.png)
+
+![Sketchpad Preview 1](/assets/EtchaSketch.png)
+![Sketchpad Preview 2](/assets/Preview.png)
